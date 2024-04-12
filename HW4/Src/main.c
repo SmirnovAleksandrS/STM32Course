@@ -62,6 +62,7 @@ void ChangeRunningTask(void)
   for (int i = 0; i < count_tasks; i ++){
     if (mx_prior < tasks[i]->priority){
       rn_task = tasks[i];
+      mx_prior = rn_task->priority;
     }
   }
   rn_task->priority --;
